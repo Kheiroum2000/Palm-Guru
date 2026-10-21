@@ -33,18 +33,17 @@ function Payment (){
           <p className="text-sm text-gray-500 mt-2">
             No subscription required
           </p>
+        
         </div>
 
-        <button onClick={handleChange}
-          type="button"
-          className="w-full bg-[#173F35] text-white py-3 rounded-xl font-semibold hover:bg-[#2F7D5B] transition-colors cursor-pointer"
-        >
-          Proceed to Payment
-        </button>
-
-        <p className="text-xs text-gray-400 mt-4">
-          Payment integration coming soon
-        </p>
+        {!paymentSuccess ? <button onClick={handleChange}
+                    type="button"
+                    className="w-full bg-[#173F35] text-white py-3 rounded-xl font-semibold hover:bg-[#2F7D5B] transition-colors cursor-pointer"
+                    >
+                    Proceed to Payment
+            </button> : <p className="text-xs text-gray-400 mt-4">
+          Payment Successful!
+        </p>}
 
       </div>
     </section>
