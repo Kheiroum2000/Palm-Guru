@@ -1,4 +1,12 @@
+import { useState } from "react"
+
 function Payment (){
+    const [paymentSuccess, setPaymentSuccess] = useState(false)
+
+    const handleChange = () => {
+        setPaymentSuccess(true)
+    }
+
  return (
 
     <section className="bg-[#F8F7F2] py-16 px-4">
@@ -27,7 +35,7 @@ function Payment (){
           </p>
         </div>
 
-        <button
+        <button onClick={handleChange}
           type="button"
           className="w-full bg-[#173F35] text-white py-3 rounded-xl font-semibold hover:bg-[#2F7D5B] transition-colors cursor-pointer"
         >
