@@ -13,6 +13,9 @@ function Home ({heroData}){
     // Functions
     const paymentOption = (status) => {
         setImageConfirm(status)
+        if(!status){
+            setPaymentComplete(false)
+        }
     }
 
     const FncPaymentSuccess = (x) => {
@@ -21,9 +24,9 @@ function Home ({heroData}){
 
     return(
         <>  
-        <Hero title={heroData.title} description={heroData.description}/>
+        {!paymentComplete && <Hero title={heroData.title} description={heroData.description}/>}
 
-        <PalmUpload paymentOption={paymentOption}/>
+        {!paymentComplete &&<PalmUpload paymentOption={paymentOption}/>}
         
         {imageConfirm && !paymentComplete && <Payment FncPaymentSuccess={FncPaymentSuccess}/>}
 
