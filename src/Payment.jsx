@@ -1,10 +1,12 @@
 import { useState } from "react"
 
-function Payment (){
+function Payment ({FncPaymentSuccess}){
     const [paymentSuccess, setPaymentSuccess] = useState(false)
 
     const handleChange = () => {
         setPaymentSuccess(true)
+        FncPaymentSuccess(true)
+
     }
 
  return (

@@ -93,12 +93,6 @@ function PalmUpload({paymentOption}){
         
         </section>
 
-        {/* <section className="max-w-2xl mx-auto px-6 py-12 bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mt-3">
-
-            <h2>Payment</h2>
-
-        </section> */}
-
         </>
     )
 }
